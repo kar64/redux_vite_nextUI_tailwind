@@ -1,0 +1,40 @@
+ https://redux-toolkit.js.org/introduction/getting-started
+ 
+ наш официальный шаблон Redux Toolkit + TS для Vite
+
+npx degit reduxjs/redux-templates/packages/vite-template-redux .
+npm i
+
+https://nextui.org/docs/guide/installation
+
+npm i @nextui-org/react framer-motion
+
+https://tailwindcss.com/docs/guides/vite
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+tailwind.config.js
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+======================
+  index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+==========================
+tailwind.config.js
+const {nextui} = require("@nextui-org/react");
+content
+ "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+
+  darkMode: "class",
+  plugins: [nextui()],
+============================
+main.tsx
+import {NextUIProvider} from "@nextui-org/react";
+  <NextUIProvider>
+          <App />
+    </NextUIProvider>
